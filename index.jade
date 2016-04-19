@@ -236,13 +236,9 @@ body
           | Learn more
       table#headings
         tr
-          th.version(class='nightly', title=tip('nightly'))=es_staging.nightly._version.replace(/-nightly.*/,'')
-            sup Nightly!
-            sub=percent('nightly')+'% complete'
           each version in versions
             th.version(class='v'+version.split('.')[0], title=tip(version))=version
               sub=percent(version)+'% complete'
-    - versions.unshift('nightly')
     input#flagged(type='checkbox', style='position:fixed', checked='checked')
     article
       each obj1, category in testers

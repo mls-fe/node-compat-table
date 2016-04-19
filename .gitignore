@@ -3,4 +3,3 @@ node_modules
 .idea
 node-compat-table
 .temp
-data-es6.js
